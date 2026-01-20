@@ -18,7 +18,7 @@ public class PrimitiveTypes
 		System.out.println("long " + "\t" + Long.MIN_VALUE + "\t" + Long.MAX_VALUE);
 		System.out.println();
 
-		System.out.println("long " + "\t" + Float.MIN_VALUE + "\t\t" + Float.MAX_VALUE);
+		System.out.println("float " + "\t" + Float.MIN_VALUE + "\t\t" + Float.MAX_VALUE);
 		System.out.println("double " + "\t" + Double.MIN_VALUE + "\t" + Double.MAX_VALUE);
 		System.out.println();
 
