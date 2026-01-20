@@ -1,0 +1,96 @@
+import java.util.Random;
+
+/**
+ * Demonstrate creating arrays, populating them with some data,
+ * and outputting the data.
+ * 
+ * @author mvail
+ */
+public class ArrayExample {
+
+	/**
+	 * @param args unused
+	 */
+	public static void main(String[] args) {
+		final int ARRAY_SIZE = 10;
+		Random rand = new Random();
+		
+		//Create an array to hold ARRAY_SIZE ints.
+		//
+		//An array is an object, so you must use the
+		// 'new' keyword, but array constructors break
+		// the usual pattern by specifying the size
+		// parameter in square brackets rather than
+		// in parentheses.
+		int[] anArray = new int[ARRAY_SIZE];
+
+		//You can iterate through the contents of
+		// an array in a for-each loop.
+		//
+		//We haven't initialized any of the ints,
+		// so they all have default values.
+		System.out.println("Displaying an un-initialized int[]:");
+		for (int i : anArray) {
+			System.out.print(i);
+			System.out.print(" ");
+		}
+		System.out.println();
+		
+		//You cannot initialize values with a
+		// for-each loop - you must access the
+		// array by index.
+		//Always use the length of the array in your
+		// loop condition so it automatically adapts
+		// if you change the size of the array.
+		for (int i = 0; i < anArray.length; i++) {
+			//generate a random int from 0..99
+			// for each index position in the array
+			anArray[i] = rand.nextInt(100);
+		}
+		
+		//As before, we can use a for-each loop to
+		// see the values in the array.
+		System.out.println("Displaying an int[] with a for-each loop:");
+		for (int i : anArray) {
+			System.out.print(i);
+			System.out.print(" ");
+		}
+		System.out.println();
+		
+		//Or, we can use a for loop and get the
+		// values by index.
+		System.out.println("Displaying an int[] with a for loop:");
+		for (int i = 0; i < anArray.length; i++) {
+			System.out.print(anArray[i]);
+			System.out.print(" ");
+		}
+		System.out.println();
+		
+		//Arrays can also hold object references,
+		// but you will get a NullPointerException
+		// if you try to use an uninitialized
+		// reference, just as with any other
+		// object reference.
+		//
+		//Also, as before, you must initialize
+		// values by accessing the array by index.
+		String sourceString = "This is just a String for getting substrings.";
+		String[] anotherArray = new String[ARRAY_SIZE];
+		for (int i = 0; i < anotherArray.length; i++) {
+			//we'll randomly generate indexes for getting substrings from
+			// sourceString
+			int startIndex = rand.nextInt(sourceString.length());
+			int charsToInclude = rand.nextInt(sourceString.length() - startIndex);
+			//anotherArray stores a reference to a String at each index position
+			anotherArray[i] = sourceString.substring(startIndex, startIndex + charsToInclude);
+		}
+		
+		//Let's see what we put in our String[].
+		System.out.println("Displaying a String[] with a for-each loop:");
+		for (String s : anotherArray) {
+			System.out.println(s);
+		}
+		System.out.println();
+	}
+}
+

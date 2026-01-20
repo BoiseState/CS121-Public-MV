@@ -1,0 +1,7 @@
+LName,FName,Email,Phone
+Vail,Mason,mvail@bsu.edu,2081234567
+DeClown,Bozo,yukyuk@yahoo.com,2087654321
+Stoodent,Sam,leet@compuserve.com,2085551337
+McCarthy,Charlie,blockhead@aol.com,2085550000
+Tasty,Lil',agoldberg@aol.com,2085551234
+Adees,Jenny,goodtimes@msn.com,2088675309
