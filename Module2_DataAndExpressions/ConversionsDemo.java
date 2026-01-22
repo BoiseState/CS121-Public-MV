@@ -35,7 +35,10 @@ public class ConversionsDemo {
         System.out.println("Trying to cast " + long2 + " to an int: " + int3);
         //nope - truncation made it weird - value of long was outside valid int range
         double dbl1 = long2; //automatic valid conversion from long to double, even though it's possible to lose some significant digits
-        System.out.println("Trying to cast " + long2 + " to a double: " + dbl1);
+        System.out.println("Trying to assign " + long2 + " to a double: " + dbl1);
+        float float1 = long2; //automatic valid (though risky) conversion of long to float
+        System.out.println("Trying to assign " + long2 + " to a float: " + float1);
+        //significant digits were lost!!! only 7 significant digits remained in the float
 
         long long3 = 234567890L;
         int int4 = (int)long3; //trying to cast a long to an int, again
@@ -43,7 +46,9 @@ public class ConversionsDemo {
         System.out.println("Trying to cast " + long3 + " to an int: " + int4); //truncation made it weird
 
         int int5 = 'a'; //shockingly valid conversion from char to int (don't actually do this)
-        System.out.println("'a' stored in an int: " + int5);
+        System.out.println("'a' assigned to an int: " + int5);
+        char char1 = (char)('a' + 13); //casting from an int to a char after "character math"
+        System.out.println("'a' + 13 = '" + char1 + "'");
 
         //boolean isItTrue = "true"; //invalid assignment of String to boolean
         //boolean isItTrue = (boolean)"true"; //invalid cast of String to boolean
