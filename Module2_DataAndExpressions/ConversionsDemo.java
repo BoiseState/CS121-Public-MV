@@ -1,10 +1,26 @@
 /**
- * Demonstrate widening and narrowing conversions,
- * automatic (promotion) and with casting.
+ * Demonstrate widening (automatic) and narrowing (with casting) conversions.
  * @author mvail
  */
 public class ConversionsDemo {
     public static void main(String[] args) {
+        /*
+         * Roughly speaking, you can think of the hierarchy of numeric type "sizes" as:
+         *
+         * Biggest  double (Caution: see note, below)
+         *          float  (Caution: see note, below)
+         *          long
+         *          int
+         *          short
+         * Smallest byte
+         * 
+         * While the floating point types are considered "wider" than longs and assignment
+         * of a long to either float or double happens automatically with no warning, there
+         * is a real danger of losing significant digits. Remember that the limitation of
+         * floats and doubles is how many significant digits they can hold, not so much the
+         * range of value magnitudes.
+         */
+
         int int1 = 10;      //valid assignment of int literal to int variable
         long long1 = int1;  //automatic valid widening conversion of int to long
 
