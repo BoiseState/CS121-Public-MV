@@ -1,4 +1,4 @@
-# CS121_CodeExamples
+# CS121 Code Examples
 
 This repository contains code examples for the concepts introduced in
 CS 121.  Each module has its own example folder.
@@ -15,6 +15,5 @@ The focus of each module is as follows:
 * Module 4: Conditionals and Loops
 * Module 5: Writing Methods, Using ArrayLists, Reading Files, Handling Exceptions
 * Module 6: Writing Classes
-* Module 7: Arrays
+* Module 7: Arrays, including Command Line Arguments
 * Module 8: GUIs
-
