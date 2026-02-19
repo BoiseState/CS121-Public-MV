@@ -7,7 +7,7 @@
  * 
  * @author mvail
  */
-public class NestedForEvenOddSums {
+public class ForEvenOddSums {
     public static void main(String[] args) {
         /*
          * Declare variables for sum of evens and sum of odds.
