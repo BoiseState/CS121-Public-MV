@@ -42,4 +42,15 @@ public class Card implements Comparable<Card> {
         //lower ordinal value than a card with a higher value
         return this.faceValue.ordinal() - otherCard.faceValue.ordinal();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof Card) {
+            Card other = (Card) o;
+            if (this.suit == other.suit && this.faceValue == other.faceValue) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
