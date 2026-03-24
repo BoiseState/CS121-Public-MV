@@ -47,7 +47,7 @@ public class Card implements Comparable<Card> {
     public boolean equals(Object o) {
         if (o instanceof Card) {
             Card other = (Card) o;
-            if (this.suit == other.suit && this.faceValue == other.faceValue) {
+            if (this.faceValue == other.faceValue) {
                 return true;
             }
         }

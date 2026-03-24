@@ -17,5 +17,11 @@ public class DieRoller {
         } else {
             System.out.println("We tied! We both got " + myVal + ".");
         }
+
+        //PAIR OF DICE
+
+        PairOfDice pair = new PairOfDice(12);
+        pair.roll();
+        System.out.println(pair.toString());
     }
 }
