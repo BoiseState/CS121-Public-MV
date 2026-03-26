@@ -32,6 +32,15 @@ public class Die {
         this(DEFAULT_SIDES); //this constructor is calling the other constructor
     }
 
+    /**
+     * Copy constructor - duplicates the given Die
+     * @param original the Die to copy
+     */
+    public Die(Die original) {
+        faceValue = original.faceValue;
+        numSides = original.numSides;
+    }
+
     //methods / behaviors
 
     /** @return number of sides */
@@ -49,14 +58,14 @@ public class Die {
      * @param newFaceValue
      * @return true if given face value was valid, else false
      */
-    public boolean setFaceValue(int newFaceValue) {
-        if (newFaceValue > 0 && newFaceValue <= numSides) { //"validation"
-            faceValue = newFaceValue;
-            return true;
-        } else { //invalid new value
-            return false;
-        }
-    }
+    // public boolean setFaceValue(int newFaceValue) {
+    //     if (newFaceValue > 0 && newFaceValue <= numSides) { //"validation"
+    //         faceValue = newFaceValue;
+    //         return true;
+    //     } else { //invalid new value
+    //         return false;
+    //     }
+    // }
 
     /**
      * Roll Die to get a new random face value.
@@ -66,5 +75,10 @@ public class Die {
         Random rand = new Random();
         faceValue = rand.nextInt(numSides) + 1;
         return faceValue;
+    }
+
+    @Override
+    public String toString() {
+        return "Die: " + faceValue + " of " + numSides;
     }
 }

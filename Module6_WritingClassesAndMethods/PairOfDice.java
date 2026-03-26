@@ -58,9 +58,12 @@ public class PairOfDice {
      */
     public Die getDie1() {
         //return die1; //BREAKS ENCAPSULATION of PairOfDice!
-        Die d1Copy = new Die(die1.getNumSides());
-        d1Copy.setFaceValue(die1.getFaceValue());
-        return d1Copy; //keeps MY die1 safe - MY die1 can't be changed by someone else
+
+        // Die d1Copy = new Die(die1.getNumSides());
+        // d1Copy.setFaceValue(die1.getFaceValue()); //works, but required an unwanted setter
+        // return d1Copy; //keeps MY die1 safe - MY die1 can't be changed by someone else
+        
+        return new Die(die1); //use the Die copy constructor - best choice
     }
 
     /**

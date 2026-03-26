@@ -23,5 +23,12 @@ public class DieRoller {
         PairOfDice pair = new PairOfDice(12);
         pair.roll();
         System.out.println(pair.toString());
+
+        //test encapsulation
+        Die d1 = pair.getDie1();
+        System.out.println("d1: " + d1.toString());
+        d1.roll();
+        System.out.println("d1: " + d1.toString());
+        System.out.println(pair.toString());
     }
 }
