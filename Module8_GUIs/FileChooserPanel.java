@@ -17,7 +17,7 @@ import javax.swing.ScrollPaneConstants;
   @author CS121 Instructors
  */
 @SuppressWarnings("serial")
-public class FileChooser extends JPanel
+public class FileChooserPanel extends JPanel
 {
 	private JTextArea filePreview;
 	private JButton openFileButton;
@@ -26,7 +26,7 @@ public class FileChooser extends JPanel
 	 * Opens a file chooser dialog, reads the selected file and loads it into a
 	 * text area.
 	 */
-	public FileChooser()
+	public FileChooserPanel()
 	{
 		openFileButton = new JButton("Select File");
 		openFileButton.addActionListener(new ButtonActionListener());
